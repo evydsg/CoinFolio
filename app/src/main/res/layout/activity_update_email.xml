@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/white"
+    tools:context=".UpdateEmailActivity">
+
+    <TextView
+        android:id="@+id/update_email_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Update your Email"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/update_email_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="Please enter your password and verify before continuing."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/currentEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instructions"
+        android:layout_marginTop="20dp"
+        android:text="Current Email"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/showCurrentEmail"
+        android:layout_width="397dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentEmail"
+        android:background="@drawable/border"
+        android:hint="Current email"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showCurrentEmail"
+        android:layout_marginTop="20dp"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif" />
+
+    <EditText
+        android:id="@+id/editText_verify_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_password"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/border"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textColorHint="@color/black" />
+
+    <Button
+        android:id="@+id/authenticate"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_verify_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border"
+        android:text="authenticate"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView_update_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/authenticate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Your profile is not verified yet!"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/textView_new_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_update_email"
+        android:layout_marginTop="20dp"
+        android:text="New Email"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif" />
+
+    <EditText
+        android:id="@+id/editText_new_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_new_email"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/border"
+        android:hint="Enter your new email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:textColorHint="@color/black"/>
+
+    <Button
+        android:id="@+id/update_email"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_new_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border"
+        android:text="update email"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="58dp"
+        android:layout_height="85dp"
+        android:layout_below="@id/update_email"
+        android:layout_centerInParent="true"
+        android:elevation="10dp"
+        android:visibility="gone" />
+
+
+
+
+</RelativeLayout>
