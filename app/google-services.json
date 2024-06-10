@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "869884696723",
+    "project_id": "coinfolio-dd7e3",
+    "storage_bucket": "coinfolio-dd7e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869884696723:android:8e5e3f2977c7eefd0ad566",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlvsLPjzcZ5CMyRRnZDuiqVvvi2draVFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

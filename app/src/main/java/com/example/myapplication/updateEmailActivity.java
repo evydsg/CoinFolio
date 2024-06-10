@@ -26,7 +26,7 @@ import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class UpdateEmailActivity extends AppCompatActivity {
+class UpdateEmailActivity extends AppCompatActivity {
 
     private FirebaseAuth authProfile;
     private FirebaseUser firebaseUser;
@@ -169,66 +169,4 @@ public class UpdateEmailActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        //Inflate Menu Items
-        getMenuInflater().inflate(R.menu.common_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    //When any option is selected
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-
-        if(id== android.R.id.home)
-        {
-            NavUtils.navigateUpFromSameTask(UpdateEmailActivity.this);
-        }
-        else if(id == R.id.refresh_menu)
-        {
-            //Refresh Activity
-            startActivity(getIntent());
-            finish();
-            overridePendingTransition(0,0);
-        }else if(id ==R.id.update_profile)
-        {
-            Intent intent = new Intent(UpdateEmailActivity.this, UpdateProfileActivity.class);
-            startActivity(intent);
-            finish();
-        }else if(id ==R.id.update_email)
-        {
-            Intent intent = new Intent(UpdateEmailActivity.this, UpdateEmailActivity.class);
-            startActivity(intent);
-        }else if(id == R.id.settings)
-        {
-            Toast.makeText(UpdateEmailActivity.this, "Menu Settings", Toast.LENGTH_LONG).show();
-        }else if(id == R.id.change_password)
-        {
-            Intent intent = new Intent(UpdateEmailActivity.this, ChangePasswordActivity.class);
-            startActivity(intent);
-            finish();
-        }
-        else if(id == R.id.delete_account)
-        {
-            Intent intent = new Intent(UpdateEmailActivity.this, DeleteAccount.class);
-            startActivity(intent);
-            finish();
-        }
-        else if(id == R.id.logout)
-        {
-            authProfile.signOut();
-            Toast.makeText(UpdateEmailActivity.this, "Sign Out", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(UpdateEmailActivity.this, MainActivity.class);
-
-            //Clear stack to prevent user from coming back to MainProfile Activity
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-            finish();
-        }else {
-            Toast.makeText(UpdateEmailActivity.this, "Something went wrong!", Toast.LENGTH_LONG).show();
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }

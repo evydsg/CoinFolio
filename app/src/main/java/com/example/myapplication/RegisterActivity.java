@@ -208,24 +208,4 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        //Inflate Menu Items
-        getMenuInflater().inflate(R.menu.common_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    //When any option is selected
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-
-        if(id== android.R.id.home)
-        {
-            NavUtils.navigateUpFromSameTask(RegisterActivity.this);
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

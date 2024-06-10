@@ -7,6 +7,7 @@
     android:background="@color/black_shade_1"
     tools:context=".MainActivity">
 
+
     <EditText
         android:id="@+id/idEditSearch"
         android:layout_width="match_parent"

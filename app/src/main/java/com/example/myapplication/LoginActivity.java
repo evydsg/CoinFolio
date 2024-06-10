@@ -208,25 +208,5 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        //Inflate Menu Items
-        getMenuInflater().inflate(R.menu.common_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    //When any option is selected
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-
-        if(id== android.R.id.home)
-        {
-            NavUtils.navigateUpFromSameTask(LoginActivity.this);
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
 }
